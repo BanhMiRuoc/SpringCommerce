@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone Store</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/static/js/index.js"></script>
+</head>
+<body>
+<!-- Header Section -->
+<div id="header">
+    <div class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <img src="/static/images/logo.png" width="5%" alt="Logo" class="logo">
+            <h1>MeiChan</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="/templates/index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="/templates/cart.html" class="nav-link">Cart | <span id="number_product">0</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Hello User</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Body Section -->
+<div id="product">
+    <div class="container">
+        <div class="row">
+            <!-- Example Product -->
+            <div class="col-lg-4 mt-3">
+                <div class="card">
+                    <img class="card-img-top" src="images/iphone-14-pro-max.png" alt="iPhone 14 Pro Max">
+                    <div class="card-body">
+                        <h5 class="card-title name">iPhone 14 Pro Max</h5>
+                        <h5 class="card-title price">32.990.000 VND</h5>
+                        <p class="card-text">Latest model with advanced features.</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="card-footer">
+                        <a onclick="add(1)" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more products here -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

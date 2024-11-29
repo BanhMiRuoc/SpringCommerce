@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="cart">
+    <div class="container">
+        <h2>Cart</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <td colspan="7">
+                    <a type="button" class="btn btn-primary btn-back" href="index.html">Continue to shopping</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <th>STT</th>
+                <th>Product name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Example product rows -->
+            <tr id="1">
+                <td><img src="/static/images/product1.jpg" style="max-height: 50px"></td>
+                <td>1</td>
+                <td>Product Name 1</td>
+                <td><input type="number" value="2" min="1" class="quantity"></td>
+                <td><p>100,000 đ</p></td>
+                <td>200,000 đ</td>
+                <td><button onclick="del(1)" type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr id="2">
+                <td><img src="/static/images/product2.jpg" style="max-height: 50px"></td>
+                <td>2</td>
+                <td>Product Name 2</td>
+                <td><input type="number" value="1" min="1" class="quantity"></td>
+                <td><p>150,000 đ</p></td>
+                <td>150,000 đ</td>
+                <td><button onclick="del(2)" type="button" class="btn btn-danger">Delete</button></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="7" style="text-align: right">
+                    <button type="button" class="btn btn-success" id="update">Update</button>
+                    <button type="button" class="btn btn-danger" id="pay">Purchase</button>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content fs-5">
+                    <div class="modal-body">
+                        <!-- Modal message will be dynamically updated -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function del(id) {
+        console.log("Delete product with ID:", id);
+        document.getElementById(id).remove();
+    }
+
+    $("#update").click(function() {
+        alert("Cart updated successfully!");
+    });
+
+    $("#pay").click(function() {
+        alert("Purchase completed successfully!");
+        $("tbody").empty();
+    });
+</script>
+</body>
+</html>

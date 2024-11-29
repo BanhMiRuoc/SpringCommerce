@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MeiChan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="cart.html" class="nav-link">Cart | <span id="number_product">0</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="#" class="nav-link">Hello, User</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content">
+    <!-- Nội dung từ product.html -->
+    <div class="product">
+        <h2>Product List</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="product-item">
+                    <img src="images/product1.jpg" alt="Product 1" class="img-fluid">
+                    <h3>Product 1</h3>
+                    <p>Price: $100</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="product-item">
+                    <img src="/static/images/product2.jpg" alt="Product 2" class="img-fluid">
+                    <h3>Product 2</h3>
+                    <p>Price: $200</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="product-item">
+                    <img src="/static/images/product3.jpg" alt="Product 3" class="img-fluid">
+                    <h3>Product 3</h3>
+                    <p>Price: $300</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
